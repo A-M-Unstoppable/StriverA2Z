@@ -2,6 +2,11 @@
 Prroblem Link :- https://practice.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=union-of-two-sorted-arrays
 
 
+
+TC-The overall time complexity of the code is O(n log n + m log m + N + M).
+Sc-The overall space complexity of the code is O(n + m).
+
+
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
