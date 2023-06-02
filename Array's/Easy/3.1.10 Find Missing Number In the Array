@@ -1,0 +1,23 @@
+Problem Link :- https://leetcode.com/problems/missing-number/
+
+
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        long long int sum=0;
+        for(long int i=0;i<=nums.size();i++){
+            sum+=i;
+        }
+        long long int sumofarray=0;
+        for(long int i=0;i<nums.size();i++){
+            sumofarray+=nums[i];
+        }
+         int x=sumofarray-sum;
+        //  cout<<sum<<" "<<sumofarray<<" "<<x<<" ";
+        return abs(x);
+    }
+};
+
+
+
