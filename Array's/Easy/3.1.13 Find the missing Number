@@ -1,0 +1,49 @@
+
+
+Problem Link :-https://practice.geeksforgeeks.org/problems/missing-number4257/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=missing-number
+
+
+//{ Driver Code Starts
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int missingNumber(int a[], int n);
+
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int i=0, n;
+		cin>>n;
+		int a[n+5];
+		for(i=0;i<n-1;i++)
+			cin>>a[i];
+			
+		cout<<missingNumber(a, n)<<endl;
+	}
+}
+// } Driver Code Ends
+
+
+int missingNumber(int a[], int n)
+{
+    unordered_set<int> numSet;
+    
+    // Insert all numbers from 1 to N into the set
+    for (int i = 1; i <= n; i++) {
+        numSet.insert(i);
+    }
+    
+    // Remove the numbers present in the array from the set
+    for (int i = 0; i < n-1; i++) {
+        numSet.erase(a[i]);
+    }
+    
+    // The remaining number in the set is the missing number
+    return *numSet.begin();
+    
+    // Your code goes here
+}
